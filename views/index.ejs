@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rain Predictor</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌦️ Rain Predictor</h1>
+
+        <form method="POST">
+            <input type="text" name="city" placeholder="Enter city" required />
+            <button type="submit">Check</button>
+        </form>
+
+        <% if (weather) { %>
+        <div class="result success">
+            <h2><%= weather %></h2>
+        </div>
+        <% } %>
+
+        <% if (error) { %>
+        <div class="result error">
+            <h2><%= error %></h2>
+        </div>
+        <% } %>
+
+    </div>
+
+</body>
+
+</html>
